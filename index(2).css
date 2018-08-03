@@ -149,12 +149,6 @@ body {
 .examination-info .examination-item{
 	position: relative;
 }
-.examination-info .examination-item.fix-height .info-panel{
-	padding-bottom: 45px;
-}
-.examination-info .examination-item.fix-height.edit-type .info-panel{
-	padding-bottom: 59px;
-}
 .examination-info .examination-item .info-desc{
 	font-size: 15px;
 	line-height: 30px;
@@ -166,8 +160,9 @@ body {
 }
 .examination-info .examination-item .info-desc select{
 	margin-left: 15px;
-	width: auto;
-	display: inline-block;
+}
+.examination-info .examination-item .info-desc select.form-control{
+	width: auto!important;
 }
 .examination-info .examination-item .info-desc .item-box{
 	float: left;
@@ -176,17 +171,12 @@ body {
 .examination-info .examination-item .info-desc .item-box.item-block{
 	float: none;
 	margin-right: 0;
-}
-.examination-info .examination-item .info-desc .item-box.item-block.edit-type{
 	margin-bottom: 10px;
-}
-.examination-info .examination-item .info-desc .item-box.item-block.edit-type:last-child{
-	margin-bottom: 0;
 }
 .examination-info .examination-item .info-desc .item-box.item-block:last-child{
 	margin-bottom: 0;
 }
-.examination-info .examination-item .info-desc .item-bo x:last-child{
+.examination-info .examination-item .info-desc .item-box:last-child{
 	margin-right: 0;
 }
 .examination-info .examination-item .info-desc.has-select .select-type{

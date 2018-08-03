@@ -189,7 +189,18 @@
               右耳:<span>异常</span>
             </div>
           </div>
-          <p class="info-desc has-select should-select">佩戴助听装置:<span class="select-type active">有</span><span class="select-type">无</span></p>
+          <p class="info-desc has-select should-select">
+            佩戴助听装置:
+            <span class="checkbox-group">
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 有
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 无
+              </label>
+            </span>
+            <!--<span class="select-type active">有</span><span class="select-type">无</span>-->
+          </p>
           <div class="btn btn-xs examination-contral">
             <span>过程监控</span>
           </div>
@@ -206,14 +217,14 @@
         <div class="info-panel">
           <h4 class="info-title">上肢</h4>
           <div class="info-desc">
-            <div class="item-box form-inline item-block">
+            <div class="item-box form-inline item-block edit-type">
               左上肢:
               <select class="form-control">
                 <option value="0">正常</option>
                 <option value="1">异常</option>
               </select>
             </div>
-            <div class="item-box form-inline item-block">
+            <div class="item-box form-inline item-block edit-type">
               右上肢:
               <select class="form-control">
                 <option value="0">正常</option>
@@ -231,7 +242,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 examination-item">
+      <div class="col-sm-6 examination-item fix-height edit-type">
         <!-- 改2 : 所有区域外加info-panel -->
         <div class="info-panel">
           <h4 class="info-title">躯干和颈部</h4>
@@ -267,14 +278,14 @@
           <h4 class="info-title">下肢</h4>
 
           <div class="info-desc">
-            <div class="item-box form-inline item-block">
+            <div class="item-box form-inline item-block edit-type">
               左下肢:
               <select class="form-control">
                 <option value="0">正常</option>
                 <option value="1">异常</option>
               </select>
             </div>
-            <div class="item-box form-inline item-block">
+            <div class="item-box form-inline item-block edit-type">
               右下肢:
               <select class="form-control">
                 <option value="0">正常</option>
@@ -367,11 +378,6 @@
         console.log($('textarea', modal).val())
       }
       // location.reload()
-    })
-
-    /* 选择 */
-    $('.should-select > .select-type').on('click', function(){
-      $(this).addClass('active').siblings().removeClass('active')
     })
 
 
