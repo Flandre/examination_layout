@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/main.min.css" rel="stylesheet">
+  <link href="static/content.min.css" rel="stylesheet">
+  <link href="static/font-awesome.min.css" rel="stylesheet">
+  <!--<link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">-->
+
+  <link href="index.css" rel="stylesheet">
+  <style>
+
+  </style>
+  
+</head>
+<body>
+<div class="container examination-body">
+  <h2 class="top-title">体检结果</h2>
+  <!--
+  审核中：不显示图片
+  状态通过：使用examination-success图片
+  状态不通过：使用examination-failed图片
+  -->
+  <img src="images/examination-success.png" class="examination-status">
+  <!--
+  状态为"不通过"才显示
+  -->
+  <p class="failed-desc">患有影响肢体活动的神经系统疾病等妨碍安全驾驶疾病</p>
+
+  <h3 class="group-title"><span>申请信息</span></h3>
+
+  <!-- 改2 : 所有区域外加info-panel -->
+  <div class="info-panel">
+    <h4 class="info-title">申请人信息</h4>
+    <div class="row user-info">
+      <!-- 改2 : 身份照片结构更改 -->
+      <div class="col-sm-5 col-sm-push-7 img-container">
+        <div class="img-box">
+          <div class="avatar-box img-preview">
+            <img src="test/avatar.jpg">
+          </div>
+          <span class="img-info">证件照</span>
+        </div>
+        <div class="img-box">
+          <div class="avatar-box img-preview">
+            <img src="test/avatar.jpg">
+          </div>
+          <span class="img-info">驾驶证照片</span>
+        </div>
+      </div>
+      <div class="col-sm-7 col-sm-pull-5">
+        <div class="info-item">
+          <span class="type">姓名:</span>
+          <span class="text">张小明</span>
+        </div>
+        <div class="info-item">
+          <span class="type">性别:</span>
+          <span class="text">女</span>
+        </div>
+        <div class="info-item">
+          <span class="type">出生日期:</span>
+          <span class="text">1996年5月6日</span>
+        </div>
+        <div class="info-item">
+          <span class="type">住址:</span>
+          <span class="text">北京市朝阳区北辰四路8号汇欣大厦A座</span>
+        </div>
+        <div class="info-item">
+          <span class="type">证件类型:</span>
+          <span class="text">身份证</span>
+        </div>
+        <div class="info-item">
+          <span class="type">证件号码:</span>
+          <span class="text">110106199605061559</span>
+        </div>
+        <div class="info-item">
+          <span class="type">申请准驾车型:</span>
+          <span class="text">C1小型汽车</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 改2 : 去掉cartline -->
+  <!--<hr class="cart-line">-->
+
+  <!-- 改2 : 所有区域外加info-panel -->
+  <div class="info-panel">
+    <!-- 改2 : 标题改为申告事项，添加illness-type区域 -->
+    <h4 class="info-title">申告事项</h4>
+    <div class="illness-type">
+      <p>体检人<span class="illness-item active">具有</span><span class="illness-item">不具有</span>下列疾病或者情况：</p>
+    </div>
+    <div class="illness-list">
+      <div class="row">
+        <!--
+        选中项目在illness-item上添加active
+        -->
+        <div class="col-sm-3 illness-item active">
+          <span>器质性心脏病</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>癫痫</span>
+        </div>
+        <div class="col-sm-3 illness-item active">
+          <span>美尼尔氏症</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>眩晕</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>癔病</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>震颤麻痹</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>精神病</span>
+        </div>
+        <div class="col-sm-3 illness-item">
+          <span>痴呆</span>
+        </div>
+      </div>
+      <div class="illness-item active">
+        <span>影响肢体活动的神经系统疾病等方案安全驾驶疾病</span>
+      </div>
+      <div class="illness-item">
+        <span>吸食、注射毒品、长期服用依赖性精神药品成瘾尚未戒除</span>
+      </div>
+    </div>
+  </div>
+
+
+  <h3 class="group-title"><span>体检信息</span></h3>
+  <div class="examination-info">
+    <div class="row">
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">身高</h4>
+          <p class="info-desc">身高:<span>178厘米</span></p>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">辨色力</h4>
+          <p class="info-desc has-select">红绿色盲:<span>有</span></p>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">视力</h4>
+          <div class="row">
+            <div class="item-box col-xs-6">
+              <p class="info-desc">左眼:<span>5.0</span></p>
+              <p class="info-desc has-select should-select">校正:<span class="select-type active">是</span><span class="select-type">否</span></p>
+            </div>
+            <div class="item-box col-xs-6">
+              <p class="info-desc">右眼:<span>4.0</span></p>
+              <p class="info-desc has-select should-select">校正:<span class="select-type active">是</span><span class="select-type">否</span></p>
+            </div>
+          </div>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">听力</h4>
+          <div class="info-desc">
+            <div class="item-box">
+              左耳:<span>正常</span>
+            </div>
+            <div class="item-box">
+              右耳:<span>异常</span>
+            </div>
+          </div>
+          <p class="info-desc has-select should-select">佩戴助听装置:<span class="select-type active">有</span><span class="select-type">无</span></p>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 examination-item">
+        <!--
+        选项可以设置时，在info-title中添加can-change，并且在内容中添加fontawesome的标签
+        改2 : 去掉can-change和fontawesome
+        -->
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">上肢</h4>
+          <div class="info-desc">
+            <div class="item-box form-inline item-block">
+              左上肢:
+              <select class="form-control">
+                <option value="0">正常</option>
+                <option value="1">异常</option>
+              </select>
+            </div>
+            <div class="item-box form-inline item-block">
+              右上肢:
+              <select class="form-control">
+                <option value="0">正常</option>
+                <option value="1">异常</option>
+              </select>
+            </div>
+          </div>
+          <div class="image-box">
+            <div class="examination-image img-preview">
+              <img src="test/avatar.jpg">
+            </div>
+          </div>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">躯干和颈部</h4>
+          <div class="info-desc form-inline">
+            运动功能障碍:
+            <select class="form-control">
+              <option value="0">有</option>
+              <option value="1">无</option>
+            </select>
+          </div>
+          <div class="image-group">
+            <div class="image-box">
+              <div class="examination-image img-preview">
+                <img src="test/avatar.jpg">
+              </div>
+            </div>
+            <div class="image-box">
+              <div class="examination-image img-preview">
+                <img src="test/avatar.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 examination-item">
+        <!-- 改2 : 所有区域外加info-panel -->
+        <div class="info-panel">
+          <h4 class="info-title">下肢</h4>
+
+          <div class="info-desc">
+            <div class="item-box form-inline item-block">
+              左下肢:
+              <select class="form-control">
+                <option value="0">正常</option>
+                <option value="1">异常</option>
+              </select>
+            </div>
+            <div class="item-box form-inline item-block">
+              右下肢:
+              <select class="form-control">
+                <option value="0">正常</option>
+                <option value="1">异常</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn btn-xs examination-contral">
+            <span>过程监控</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-active-bar">
+  <div class="container">
+    <a href="javascript:;" class="btn btn-lg btn-primary pass">通过</a>
+    <a href="javascript:;" class="btn btn-lg btn-primary unpass">不通过</a>
+  </div>
+</div>
+
+<div class="modal fade" id="passModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary enter">确定</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--swiper modal-->
+<div class="swiper-modal" id="swiperModal">
+  <span class="close-btn">&times;</span>
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper row">
+
+    </div>
+  </div>
+</div>
+<div class="swiper-bg"></div>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
+<script>
+  $(document).ready(function(){
+    var modal = $('#passModal'), mBody = $('.modal-body', modal), mEnter = $('.enter', modal), type = ''
+    $('.pass').on('click', function(){
+      type = 'pass'
+      mBody.html(
+        '<div class="feedback">' +
+          '<p>确定审核通过？</p>' +
+          '<div class="form-inline">' +
+            '<div class="text-area-box">' +
+              '<div class="control-label">备注:</div>' +
+              '<textarea class="form-control" placeholder="如有其它说明，请在此填写"></textarea>' +
+            '</div>' +
+          '</div>' +
+        '</div>'
+      )
+      modal.modal('show')
+    })
+    $('.unpass').on('click', function(){
+      type = 'unpass'
+      mBody.html(
+        '<div class="feedback">' +
+          '<p>确定审核不通过？</p>' +
+          '<div class="form-inline">' +
+            '<div class="text-area-box">' +
+              '<div class="control-label">备注:</div>' +
+              '<textarea class="form-control" placeholder="请输入审核不通过的原因"></textarea>' +
+            '</div>' +
+          '</div>' +
+        '</div>')
+      modal.modal('show')
+    })
+    mEnter.on('click', function(){
+      console.log(type)
+      if(type == 'unpass'){
+        console.log($('textarea', modal).val())
+      }
+      // location.reload()
+    })
+
+    /* 选择 */
+    $('.should-select > .select-type').on('click', function(){
+      $(this).addClass('active').siblings().removeClass('active')
+    })
+
+
+
+    /* swiper modal  */
+    var sModal = $('#swiperModal'), sBg = $('.swiper-bg'), close = $('.close-btn', sModal), sTopBody = $('.gallery-top .swiper-wrapper', sModal),
+      sThumbBody = $('.gallery-thumbs .swiper-wrapper', sModal), galleryTop, galleryThumbs
+    /* 关闭swiper */
+    close.on('click', function(){
+      if(galleryTop){
+        galleryTop.destroy(true, true)
+      }
+      if(galleryThumbs){
+        galleryThumbs.destroy(true, true)
+      }
+      sBg.removeClass('in')
+      sModal.removeClass('in')
+      setTimeout(function(){
+        sModal.hide()
+        sBg.hide()
+      }, 300)
+    })
+    $('.examination-contral').each(function(index, ele){
+      $(ele).on('click', function(){
+        var imgList = ['./img/nature1.jpg', './img/nature2.jpg', './img/nature3.jpg', './img/nature4.jpg', './img/nature5.jpg', './img/nature6.jpg']
+        sBg.show()
+        sModal.show()
+        setTimeout(function(){
+          /* 填充图片 */
+          sTopBody.empty()
+          imgList.forEach(function(imgSrc){
+            sTopBody.append(
+              '<div class="swiper-slide col-xs-4">' +
+                '<img src="' + imgSrc + '">' +
+              '</div>'
+            )
+          })
+          sBg.addClass('in')
+          sModal.addClass('in')
+          /* 启用swiper */
+        }, 10)
+      })
+    })
+  })
+</script>
+
+</body>
+</html>
