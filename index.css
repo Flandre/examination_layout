@@ -9,6 +9,20 @@ body {
 	padding: 30px;
 	margin-top: 75px;
 }
+.top-container {
+	position: relative;
+}
+.top-container .examination-video-contral {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	background: #A0ABB7;
+	color: #fff;
+}
+.top-container .examination-video-contral span{
+	padding-left: 17px;
+	background: url("images/control-icon.png") left center no-repeat;
+}
 .top-title {
 	font-size: 24px;
 	line-height: 1;
@@ -317,6 +331,14 @@ body {
 	bottom: 50px;
 	overflow-y: auto;
 	overflow-x: hidden;
+}
+.gallery-top .video-container{
+	text-align: center;
+}
+.gallery-top .video-container video{
+	max-width: 50%;
+	min-width: 400px;
+	height: auto;
 }
 .gallery-top .swiper-slide img{
 	display: block;

@@ -17,7 +17,13 @@
 </head>
 <body>
 <div class="container examination-body">
-  <h2 class="top-title">体检结果</h2>
+  <div class="top-container">
+    <h2 class="top-title">体检结果</h2>
+    <div class="btn btn-xs examination-video-contral">
+      <span>过程监控</span>
+    </div>
+  </div>
+
   <!--
   审核中：不显示图片
   状态通过：使用examination-success图片
@@ -140,20 +146,18 @@
         <!-- 改2 : 所有区域外加info-panel -->
         <div class="info-panel">
           <h4 class="info-title">身高</h4>
-          <p class="info-desc">身高:<span>178厘米</span></p>
-          <div class="btn btn-xs examination-contral">
+          <p class="info-desc">身高:<span>178厘米</span></p><!--div class="btn btn-xs examination-contral">
             <span>过程监控</span>
-          </div>
+          </div-->
         </div>
       </div>
       <div class="col-sm-6 examination-item">
         <!-- 改2 : 所有区域外加info-panel -->
         <div class="info-panel">
           <h4 class="info-title">辨色力</h4>
-          <p class="info-desc has-select">红绿色盲:<span>有</span></p>
-          <div class="btn btn-xs examination-contral">
+          <p class="info-desc has-select">红绿色盲:<span>有</span></p><!--div class="btn btn-xs examination-contral">
             <span>过程监控</span>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -172,9 +176,9 @@
               <p class="info-desc has-select should-select">校正:<span class="select-type active">是</span><span class="select-type">否</span></p>
             </div>
           </div>
-          <div class="btn btn-xs examination-contral">
+          <!--div class="btn btn-xs examination-contral">
             <span>过程监控</span>
-          </div>
+          </div-->
         </div>
       </div>
       <div class="col-sm-6 examination-item">
@@ -201,9 +205,9 @@
             </span>
             <!--<span class="select-type active">有</span><span class="select-type">无</span>-->
           </p>
-          <div class="btn btn-xs examination-contral">
-            <span>过程监控</span>
-          </div>
+          <!--div class="btn btn-xs examination-contral">
+          <span>过程监控</span>
+          </div-->
         </div>
       </div>
     </div>
@@ -237,9 +241,9 @@
               <img src="test/avatar.jpg">
             </div>
           </div>
-          <div class="btn btn-xs examination-contral">
+          <!--div class="btn btn-xs examination-contral">
             <span>过程监控</span>
-          </div>
+          </div-->
         </div>
       </div>
       <div class="col-sm-6 examination-item fix-height edit-type">
@@ -293,9 +297,9 @@
               </select>
             </div>
           </div>
-          <div class="btn btn-xs examination-contral">
+          <!--div class="btn btn-xs examination-contral">
             <span>过程监控</span>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -342,7 +346,7 @@
 <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
 <script>
   $(document).ready(function(){
-    var modal = $('#passModal'), mBody = $('.modal-body', modal), mEnter = $('.enter', modal), type = ''
+    var modal = $('#passModal'), mBody = $('.modal-body', modal), mEnter = $('.enter', modal), type = '', modelType = ''
     $('.pass').on('click', function(){
       type = 'pass'
       mBody.html(
@@ -396,12 +400,17 @@
       sBg.removeClass('in')
       sModal.removeClass('in')
       setTimeout(function(){
+        if(!!$('#video')[0]) {
+          $('#video')[0].pause()
+        }
         sModal.hide()
         sBg.hide()
       }, 300)
     })
+
     $('.examination-contral').each(function(index, ele){
       $(ele).on('click', function(){
+        modelType = 'pic'
         var imgList = ['./img/nature1.jpg', './img/nature2.jpg', './img/nature3.jpg', './img/nature4.jpg', './img/nature5.jpg', './img/nature6.jpg']
         sBg.show()
         sModal.show()
@@ -420,6 +429,29 @@
           /* 启用swiper */
         }, 10)
       })
+    })
+    $('.examination-video-contral').on('click', function(){
+      var imgList = ['./img/nature1.jpg', './img/nature2.jpg', './img/nature3.jpg', './img/nature4.jpg', './img/nature5.jpg', './img/nature6.jpg']
+      sBg.show()
+      sModal.show()
+      setTimeout(function(){
+        /* 填充图片 */
+        if(modelType != 'video'){
+          sTopBody.empty()
+          sTopBody.append(
+            '<div class="swiper-slide video-container col-xs-12">' +
+            '<video width="640" height="480" controls id="video">' +
+              '<source src="http://www.w3school.com.cn/i/movie.ogg"  type="video/ogg">' +
+            '</video>' +
+            '</div>'
+          )
+
+          modelType = 'video'
+        }
+        sBg.addClass('in')
+        sModal.addClass('in')
+        /* 启用swiper */
+      }, 10)
     })
   })
 </script>
