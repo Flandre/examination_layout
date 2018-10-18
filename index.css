@@ -181,6 +181,7 @@ body {
 .examination-info .examination-item .info-desc select{
 	margin-left: 15px;
 	width: auto;
+	max-width: 100%;
 	display: inline-block;
 }
 .examination-info .examination-item .info-desc .item-box{
